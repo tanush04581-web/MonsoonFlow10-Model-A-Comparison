@@ -1,0 +1,641 @@
+{
+ "static_inference": {
+  "inference_files": [
+   "inference/__init__.py",
+   "inference/loader.py",
+   "inference/predictor.py",
+   "inference/schemas.py",
+   "models/__init__.py",
+   "models/backbones.py",
+   "models/physics_losses.py",
+   "models/transforms.py",
+   "resources/yug-monsoon-kit/monsoon_r1/client.py",
+   "resources/yug-monsoon-kit/monsoon_r1/contract.py",
+   "resources/yug-monsoon-kit/monsoon_r1/repo_scan.py",
+   "resources/yug-monsoon-kit/monsoon_r1/schema_validator.py",
+   "resources/yug-monsoon-kit/monsoon_r1/scoring.py",
+   "resources/yug-monsoon-kit/monsoon_r1/template/serve.py",
+   "serve.py"
+  ],
+  "per_file": {
+   "inference/__init__.py": {
+    "imports": [
+     "loader",
+     "predictor"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "inference/loader.py": {
+    "imports": [
+     "__future__",
+     "json",
+     "models.backbones",
+     "pathlib",
+     "time",
+     "torch",
+     "typing"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": true,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "inference/predictor.py": {
+    "imports": [
+     "__future__",
+     "loader",
+     "numpy",
+     "schemas",
+     "threading",
+     "time",
+     "torch",
+     "typing"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "inference/schemas.py": {
+    "imports": [
+     "__future__",
+     "base64",
+     "math",
+     "numpy",
+     "pydantic",
+     "typing"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "models/__init__.py": {
+    "imports": [
+     "backbones",
+     "physics_losses"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "models/backbones.py": {
+    "imports": [
+     "__future__",
+     "pathlib",
+     "torch",
+     "torch.nn",
+     "torch.nn.functional",
+     "typing"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "models/physics_losses.py": {
+    "imports": [
+     "__future__",
+     "math",
+     "torch",
+     "torch.nn",
+     "torch.nn.functional",
+     "typing"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "models/transforms.py": {
+    "imports": [
+     "__future__",
+     "math",
+     "torch",
+     "typing"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "resources/yug-monsoon-kit/monsoon_r1/client.py": {
+    "imports": [
+     "__future__",
+     "dataclasses",
+     "ipaddress",
+     "json",
+     "numpy",
+     "requests",
+     "socket",
+     "threading",
+     "time",
+     "urllib.parse"
+    ],
+    "network_imports": [
+     "requests",
+     "socket",
+     "urllib.parse"
+    ],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "resources/yug-monsoon-kit/monsoon_r1/contract.py": {
+    "imports": [
+     "__future__",
+     "base64",
+     "numpy"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "resources/yug-monsoon-kit/monsoon_r1/repo_scan.py": {
+    "imports": [
+     "__future__",
+     "ast",
+     "json",
+     "numpy",
+     "pathlib",
+     "re",
+     "zipfile"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "resources/yug-monsoon-kit/monsoon_r1/schema_validator.py": {
+    "imports": [
+     "__future__",
+     "client",
+     "numpy",
+     "sys",
+     "time"
+    ],
+    "network_imports": [],
+    "urls": [
+     "http://localhost:8000"
+    ],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "resources/yug-monsoon-kit/monsoon_r1/scoring.py": {
+    "imports": [
+     "__future__",
+     "contract",
+     "numpy"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "resources/yug-monsoon-kit/monsoon_r1/template/serve.py": {
+    "imports": [
+     "argparse",
+     "base64",
+     "fastapi",
+     "numpy",
+     "time",
+     "uvicorn"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   },
+   "serve.py": {
+    "imports": [
+     "__future__",
+     "anyio",
+     "argparse",
+     "contextlib",
+     "fastapi",
+     "fastapi.exceptions",
+     "fastapi.middleware.cors",
+     "fastapi.responses",
+     "inference.loader",
+     "inference.predictor",
+     "inference.schemas",
+     "math",
+     "time",
+     "typing",
+     "uvicorn"
+    ],
+    "network_imports": [],
+    "urls": [],
+    "cuda_refs": 0,
+    "map_location_cpu": false,
+    "set_num_threads": [],
+    "date_literals": 0
+   }
+  },
+  "gitignored_inference_files": [
+   "resources/yug-monsoon-kit/monsoon_r1/client.py",
+   "resources/yug-monsoon-kit/monsoon_r1/contract.py",
+   "resources/yug-monsoon-kit/monsoon_r1/repo_scan.py",
+   "resources/yug-monsoon-kit/monsoon_r1/schema_validator.py",
+   "resources/yug-monsoon-kit/monsoon_r1/scoring.py",
+   "resources/yug-monsoon-kit/monsoon_r1/template/serve.py"
+  ],
+  "shipped_inference_files": [
+   "inference/__init__.py",
+   "inference/loader.py",
+   "inference/predictor.py",
+   "inference/schemas.py",
+   "models/__init__.py",
+   "models/backbones.py",
+   "models/physics_losses.py",
+   "models/transforms.py",
+   "serve.py"
+  ],
+  "any_network_import_shipped": false,
+  "any_cuda_ref_shipped": false,
+  "any_network_import_incl_ignored": true
+ },
+ "server": {
+  "startup_to_ready_s": 2.730813100002706,
+  "affinity_4_cores_set": true,
+  "cuda_hidden": true,
+  "mem_after_start": {
+   "rss_mb": 417.5703125,
+   "peak_rss_mb": 417.5703125,
+   "peak_commit_mb": 1311.8125,
+   "pid": 38216
+  },
+  "mem_after_calls": {
+   "rss_mb": 1424.65234375,
+   "peak_rss_mb": 1429.9453125,
+   "peak_commit_mb": 1360.13671875,
+   "pid": 38216
+  },
+  "mem_after_validator": {
+   "rss_mb": 1425.11328125,
+   "peak_rss_mb": 1429.9453125,
+   "peak_commit_mb": 1360.9765625,
+   "pid": 38216
+  },
+  "peak_rss_mb": 1429.9453125,
+  "ram_limit_mb": 6144
+ },
+ "latency": {
+  "n": 30,
+  "errors": [],
+  "wall_s_max": 2.3881041999993613,
+  "wall_s_p50": 0.15135545000157435,
+  "wall_s_p95": 0.190240679998169,
+  "server_ms_max": 105.38099999394035,
+  "limit_s": 5.0,
+  "pass": true
+ },
+ "schema_validator": {
+  "returncode": 0,
+  "stdout": [
+   "health: OK",
+   "  [JSON lists (canonical)] no perturbation  OK   0.14s  ",
+   "  [JSON lists (canonical)] warm_ocean       OK   0.14s  ",
+   "  [JSON lists (canonical)] zeros            OK   0.17s  ",
+   "  [base64 (also tolerated)] no perturbation  OK   0.13s  ",
+   "  [base64 (also tolerated)] warm_ocean       OK   0.14s  ",
+   "  [base64 (also tolerated)] zeros            OK   0.13s  ",
+   "RESULT: all checks passed"
+  ],
+  "stderr_tail": ""
+ },
+ "offline_runtime": {
+  "blocked_outbound_attempts": 0,
+  "attempts": [],
+  "method": "socket.connect/getaddrinfo patched for non-loopback hosts (qa_offline_guard.py)"
+ },
+ "docker_available": "Docker version 29.9.3, build 5457199",
+ "git_size": {
+  "count_objects": [
+   "count: 1",
+   "size: 15 bytes",
+   "in-pack: 316",
+   "packs: 2",
+   "size-pack: 23.94 MiB",
+   "prune-packable: 0",
+   "garbage: 0",
+   "size-garbage: 0 bytes"
+  ],
+  "tracked_files": 80,
+  "tracked_bytes": 11001809,
+  "tracked_gb": 0.010246233083307743,
+  "untracked_not_ignored_files": 71,
+  "untracked_not_ignored_bytes": 32322370,
+  "shippable_gb": 0.04034878592938185,
+  "under_2gb": true,
+  "largest_shippable": [
+   [
+    "checkpoints/climatology.npy",
+    10119296
+   ],
+   [
+    "checkpoints/runs/exp1_convlstm_direct/last_state.pt",
+    6444690
+   ],
+   [
+    "checkpoints/runs/exp4_msresunet_anchor/last_state.pt",
+    4072438
+   ],
+   [
+    "checkpoints/runs/exp3_msresunet_direct/last_state.pt",
+    3929946
+   ],
+   [
+    "checkpoints/runs/exp5_msresunet_direct_22ep_control/last_state.pt",
+    3929946
+   ],
+   [
+    "checkpoints/runs/exp2_strescnn_direct/last_state.pt",
+    3688418
+   ],
+   [
+    "checkpoints/runs/exp1_convlstm_direct/best.pt",
+    2158042
+   ],
+   [
+    "checkpoints/model.pt",
+    1362884
+   ],
+   [
+    "checkpoints/runs/exp4_msresunet_anchor/best.pt",
+    1362884
+   ],
+   [
+    "checkpoints/runs/exp3_msresunet_direct/best.pt",
+    1316270
+   ]
+  ],
+  "tracked_data_files": [],
+  "tracked_weight_files": [
+   [
+    "checkpoints/model.pt",
+    1362884
+   ],
+   [
+    "checkpoints/runs/exp1_convlstm_direct/best.pt",
+    2158042
+   ],
+   [
+    "checkpoints/runs/exp1_convlstm_direct/last_state.pt",
+    6444690
+   ],
+   [
+    "checkpoints/runs/exp2_strescnn_direct/best.pt",
+    1236898
+   ],
+   [
+    "checkpoints/runs/exp2_strescnn_direct/last_state.pt",
+    3688418
+   ],
+   [
+    "checkpoints/runs/exp3_msresunet_direct/best.pt",
+    1316270
+   ],
+   [
+    "checkpoints/runs/exp3_msresunet_direct/last_state.pt",
+    3929946
+   ],
+   [
+    "checkpoints/runs/exp4_msresunet_anchor/best.pt",
+    1362884
+   ],
+   [
+    "checkpoints/runs/exp4_msresunet_anchor/last_state.pt",
+    4072438
+   ],
+   [
+    "checkpoints/runs/exp5_msresunet_direct_22ep_control/best.pt",
+    1316270
+   ],
+   [
+    "checkpoints/runs/exp5_msresunet_direct_22ep_control/last_state.pt",
+    3929946
+   ]
+  ]
+ },
+ "repo_scan": {
+  "working_tree": {
+   "points": 5.0,
+   "anti_cheat": 0.0,
+   "code_health": 5.0,
+   "critical": [
+    {
+     "level": "critical",
+     "what": "external weather/data source 'open-meteo' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'openweathermap' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'weatherapi' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'visualcrossing' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'meteomatics' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'worldweatheronline' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'cdsapi' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'gcp-public-data-arco-era5' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'weatherbench2' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'mosdac' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'noaa-gfs' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "external weather/data source 'imdlib' in inference code",
+     "file": "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py"
+    },
+    {
+     "level": "critical",
+     "what": "multi-year daily archive in the repo: data\\raw\\splits\\train.npz shape (5113, 6, 32, 36)"
+    },
+    {
+     "level": "critical",
+     "what": "multi-year daily archive in the repo: data\\raw\\splits\\val.npz shape (731, 6, 32, 36)"
+    }
+   ],
+   "warn": [
+    {
+     "level": "warn",
+     "what": "climate data file in repo",
+     "file": "data\\raw\\india_climate_train.nc"
+    }
+   ],
+   "health": {
+    "training_pipeline": true,
+    "frontend_present": true,
+    "server_separate_from_ui": false,
+    "readme": true,
+    "checkpoint": true
+   },
+   "inference_files": [
+    "inference\\__init__.py",
+    "inference\\loader.py",
+    "inference\\predictor.py",
+    "inference\\schemas.py",
+    "models\\__init__.py",
+    "models\\backbones.py",
+    "models\\physics_losses.py",
+    "models\\transforms.py",
+    "resources\\yug-monsoon-kit\\monsoon_r1\\client.py",
+    "resources\\yug-monsoon-kit\\monsoon_r1\\contract.py",
+    "resources\\yug-monsoon-kit\\monsoon_r1\\repo_scan.py",
+    "resources\\yug-monsoon-kit\\monsoon_r1\\schema_validator.py",
+    "resources\\yug-monsoon-kit\\monsoon_r1\\scoring.py",
+    "resources\\yug-monsoon-kit\\monsoon_r1\\template\\serve.py",
+    "serve.py"
+   ]
+  },
+  "working_tree_flag_paths": [
+   {
+    "flag": {
+     "level": "critical",
+     "what": "multi-year daily archive in the repo: data\\raw\\splits\\train.npz shape (5113, 6, 32, 36)"
+    },
+    "path": "data/raw/splits/train.npz",
+    "gitignored": true
+   },
+   {
+    "flag": {
+     "level": "critical",
+     "what": "multi-year daily archive in the repo: data\\raw\\splits\\val.npz shape (731, 6, 32, 36)"
+    },
+    "path": "data/raw/splits/val.npz",
+    "gitignored": true
+   },
+   {
+    "flag": {
+     "level": "warn",
+     "what": "climate data file in repo",
+     "file": "data\\raw\\india_climate_train.nc"
+    },
+    "path": "data/raw/india_climate_train.nc",
+    "gitignored": true
+   }
+  ],
+  "tracked_only": {
+   "points": 3.5,
+   "anti_cheat": 0.0,
+   "code_health": 3.5,
+   "critical": [
+    {
+     "level": "critical",
+     "what": "no model checkpoint in the repo and no Hugging Face link"
+    }
+   ],
+   "warn": [],
+   "health": {
+    "training_pipeline": false,
+    "frontend_present": true,
+    "server_separate_from_ui": true,
+    "readme": true,
+    "checkpoint": false
+   },
+   "inference_files": [
+    "inference\\__init__.py",
+    "inference\\loader.py",
+    "inference\\predictor.py",
+    "inference\\schemas.py",
+    "serve.py"
+   ]
+  },
+  "tracked_plus_untracked_not_ignored": {
+   "points": 15.0,
+   "anti_cheat": 8.0,
+   "code_health": 7.0,
+   "critical": [],
+   "warn": [],
+   "health": {
+    "training_pipeline": true,
+    "frontend_present": true,
+    "server_separate_from_ui": true,
+    "readme": true,
+    "checkpoint": true
+   },
+   "inference_files": [
+    "inference\\__init__.py",
+    "inference\\loader.py",
+    "inference\\predictor.py",
+    "inference\\schemas.py",
+    "models\\__init__.py",
+    "models\\backbones.py",
+    "models\\physics_losses.py",
+    "models\\transforms.py",
+    "serve.py"
+   ]
+  }
+ },
+ "scratch_dir": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\qa_repo_scan_szkvq20k"
+}

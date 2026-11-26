@@ -1,0 +1,31 @@
+# Python & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Datasets & Secrets (never commit raw climate archives, sealed 2021 data, or credentials)
+data/
+*.nc
+*.nc4
+*.grib
+*.grib2
+*.zarr
+*.h5
+*.hdf5
+.env
+.env.*
+*.pem
+*.key
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

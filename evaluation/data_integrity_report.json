@@ -1,0 +1,562 @@
+{
+ "netcdf": {
+  "dims": {
+   "time": 6209,
+   "channel": 6,
+   "lat": 32,
+   "lon": 36,
+   "static_channel": 2
+  },
+  "channel_coord": [
+   "t2m",
+   "tp",
+   "u10",
+   "v10",
+   "msl",
+   "tcwv"
+  ],
+  "channel_order_matches_contract": true,
+  "lat_matches_contract": true,
+  "lon_matches_contract": true,
+  "lat_south_to_north": true,
+  "units_attr": "t2m K | tp mm/day | u10 m/s | v10 m/s | msl Pa | tcwv kg/m2",
+  "time_range": [
+   "2005-01-01",
+   "2021-12-31"
+  ],
+  "n_days": 6209,
+  "time_daily_continuous": true,
+  "n_time_gaps": 0,
+  "duplicate_dates": 0,
+  "nan_count_per_channel": {
+   "t2m": 0,
+   "tp": 0,
+   "u10": 0,
+   "v10": 0,
+   "msl": 0,
+   "tcwv": 0
+  },
+  "inf_count_per_channel": {
+   "t2m": 0,
+   "tp": 0,
+   "u10": 0,
+   "v10": 0,
+   "msl": 0,
+   "tcwv": 0
+  },
+  "range_per_channel": {
+   "t2m": [
+    236.32745361328125,
+    314.9015197753906
+   ],
+   "tp": [
+    0.0,
+    249.77359008789062
+   ],
+   "u10": [
+    -16.620710372924805,
+    17.753673553466797
+   ],
+   "v10": [
+    -16.999216079711914,
+    17.692066192626953
+   ],
+   "msl": [
+    97877.7734375,
+    105115.921875
+   ],
+   "tcwv": [
+    0.1691610962152481,
+    79.5449447631836
+   ]
+  },
+  "tp_negative_cells": 0,
+  "tcwv_negative_cells": 0,
+  "t2m_outside_validity_cells": 0,
+  "static_channels": [
+   "land_sea_mask",
+   "orography_m"
+  ],
+  "static_shape": [
+   2,
+   32,
+   36
+  ],
+  "lsm_range": [
+   0.0,
+   1.0
+  ],
+  "orography_range_m": [
+   -0.15628477931022644,
+   5283.93701171875
+  ],
+  "static_npy_identical": {
+   "checkpoints": true,
+   "splits": true
+  },
+  "unit_plausibility": {
+   "t2m_mean_K": 292.3567810058594,
+   "tp_mean_mm_day": 3.618067502975464,
+   "msl_mean_Pa": 101122.078125,
+   "tcwv_mean": 30.033491134643555,
+   "ok": true
+  }
+ },
+ "splits": {
+  "train": {
+   "shape": [
+    5113,
+    6,
+    32,
+    36
+   ],
+   "dtype": "float32",
+   "date_range": [
+    20050101,
+    20181231
+   ],
+   "policy": [
+    20050101,
+    20181231
+   ],
+   "within_policy": true,
+   "covers_policy_fully": true,
+   "sorted": true,
+   "continuous_daily": true,
+   "n_finite_fraction": 1.0,
+   "bit_identical_to_raw_nc": true,
+   "doy_matches_calendar": true,
+   "n_windows_13d": 5101
+  },
+  "val": {
+   "shape": [
+    731,
+    6,
+    32,
+    36
+   ],
+   "dtype": "float32",
+   "date_range": [
+    20190101,
+    20201231
+   ],
+   "policy": [
+    20190101,
+    20201231
+   ],
+   "within_policy": true,
+   "covers_policy_fully": true,
+   "sorted": true,
+   "continuous_daily": true,
+   "n_finite_fraction": 1.0,
+   "bit_identical_to_raw_nc": true,
+   "doy_matches_calendar": true,
+   "n_windows_13d": 719
+  },
+  "test": {
+   "shape": [
+    365,
+    6,
+    32,
+    36
+   ],
+   "dtype": "float32",
+   "date_range": [
+    20210101,
+    20211231
+   ],
+   "policy": [
+    20210101,
+    20211231
+   ],
+   "within_policy": true,
+   "covers_policy_fully": true,
+   "sorted": true,
+   "continuous_daily": true,
+   "n_finite_fraction": 1.0,
+   "bit_identical_to_raw_nc": true,
+   "doy_matches_calendar": true,
+   "n_windows_13d": 353
+  },
+  "pairwise_overlap": {
+   "train&val": 0,
+   "train&test": 0,
+   "val&test": 0
+  },
+  "union_equals_raw": true,
+  "max_train_window_end": 20181231,
+  "min_val_window_start": 20190101
+ },
+ "stats": {
+  "recomputed": {
+   "train_only_kit_f4": {
+    "channels": [
+     "t2m",
+     "tp",
+     "u10",
+     "v10",
+     "msl",
+     "tcwv"
+    ],
+    "mean": [
+     292.3356628417969,
+     3.600639820098877,
+     0.9150365591049194,
+     0.1936323344707489,
+     101112.7421875,
+     29.864639282226562
+    ],
+    "std": [
+     13.449518203735352,
+     7.507794380187988,
+     2.898739814758301,
+     2.434112548828125,
+     618.4363403320312,
+     20.41170310974121
+    ]
+   },
+   "train_only_f8": {
+    "channels": [
+     "t2m",
+     "tp",
+     "u10",
+     "v10",
+     "msl",
+     "tcwv"
+    ],
+    "mean": [
+     292.33588144451863,
+     3.6006404387958866,
+     0.9150357380424153,
+     0.19363227667207236,
+     101113.0072009746,
+     29.86467062337825
+    ],
+    "std": [
+     13.449504710526348,
+     7.507783464546255,
+     2.8987394628006595,
+     2.4341147812271653,
+     618.4358801292121,
+     20.411704411447452
+    ]
+   },
+   "train_val": {
+    "channels": [
+     "t2m",
+     "tp",
+     "u10",
+     "v10",
+     "msl",
+     "tcwv"
+    ],
+    "mean": [
+     292.3426208496094,
+     3.612363576889038,
+     0.8901099562644958,
+     0.1915794461965561,
+     101120.6640625,
+     29.979764938354492
+    ],
+    "std": [
+     13.474075317382812,
+     7.546634674072266,
+     2.8944129943847656,
+     2.434798002243042,
+     619.5056762695312,
+     20.46204376220703
+    ]
+   },
+   "all_2005_2021": {
+    "channels": [
+     "t2m",
+     "tp",
+     "u10",
+     "v10",
+     "msl",
+     "tcwv"
+    ],
+    "mean": [
+     292.3567810058594,
+     3.618067502975464,
+     0.8876520991325378,
+     0.19133219122886658,
+     101122.078125,
+     30.033491134643555
+    ],
+    "std": [
+     13.46363353729248,
+     7.553342342376709,
+     2.8989806175231934,
+     2.4269521236419678,
+     619.0198364257812,
+     20.49437141418457
+    ]
+   }
+  },
+  "comparison": {
+   "checkpoints/stats.json": {
+    "vs": {
+     "train_only_kit_f4": {
+      "max_abs_mean_diff_in_std": 0.0004421433252987601,
+      "max_rel_std_diff": 1.4607824992667508e-06
+     },
+     "train_only_f8": {
+      "max_abs_mean_diff_in_std": 1.362150170035709e-05,
+      "max_rel_std_diff": 4.540233157424288e-08
+     },
+     "train_val": {
+      "max_abs_mean_diff_in_std": 0.012346032963017369,
+      "max_rel_std_diff": 0.00514815713451667
+     },
+     "all_2005_2021": {
+      "max_abs_mean_diff_in_std": 0.014640080118153966,
+      "max_rel_std_diff": 0.00603162512412008
+     }
+    },
+    "closest_source": "train_only_f8",
+    "channels_match": true
+   },
+   "splits/train_stats.json": {
+    "vs": {
+     "train_only_kit_f4": {
+      "max_abs_mean_diff_in_std": 0.0,
+      "max_rel_std_diff": 0.0
+     },
+     "train_only_f8": {
+      "max_abs_mean_diff_in_std": 0.00042852215261489655,
+      "max_rel_std_diff": 1.4539100368514199e-06
+     },
+     "train_val": {
+      "max_abs_mean_diff_in_std": 0.012787413099591024,
+      "max_rel_std_diff": 0.005146703870232345
+     },
+     "all_2005_2021": {
+      "max_abs_mean_diff_in_std": 0.015081806673443094,
+      "max_rel_std_diff": 0.006030173150392219
+     }
+    },
+    "closest_source": "train_only_kit_f4",
+    "channels_match": true
+   }
+  },
+  "climatology:checkpoints/climatology.npy": {
+   "shape": [
+    366,
+    6,
+    32,
+    36
+   ],
+   "bit_identical_to_kit_train_only": true,
+   "max_abs_diff_per_channel": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "climatology:data/raw/splits/train_climatology.npy": {
+   "shape": [
+    366,
+    6,
+    32,
+    36
+   ],
+   "bit_identical_to_kit_train_only": true,
+   "max_abs_diff_per_channel": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "leak_detectability_train_vs_trainval_clim_maxdiff": [
+   0.84423828125,
+   2.9482192993164062,
+   0.6001172065734863,
+   0.5114279985427856,
+   94.203125,
+   2.4132080078125
+  ]
+ },
+ "code_leakage": {
+  "references": {
+   "training/baselines.py": [
+    [
+     4,
+     "``data/raw/splits/val.npz``) using training-derived 2005-2018 climatology"
+    ],
+    [
+     37,
+     "val_npz: Path = Path(\"data/raw/splits/val.npz\"),"
+    ],
+    [
+     48,
+     "if int(val_dates.min()) < 20190101 or int(val_dates.max()) > 20201231:"
+    ],
+    [
+     233,
+     "val_npz: Path = Path(\"data/raw/splits/val.npz\"),"
+    ],
+    [
+     310,
+     "parser.add_argument(\"--val-npz\", type=Path, default=Path(\"data/raw/splits/val.npz\"))"
+    ]
+   ],
+   "training/evaluate_val.py": [
+    [
+     4,
+     "(``data/raw/splits/val.npz``) against real Persistence and 2005-2018 Climatology"
+    ],
+    [
+     77,
+     "val_npz: Path = Path(\"data/raw/splits/val.npz\"),"
+    ],
+    [
+     118,
+     "val_npz: Path = Path(\"data/raw/splits/val.npz\"),"
+    ],
+    [
+     214,
+     "val_npz: Path = Path(\"data/raw/splits/val.npz\"),"
+    ]
+   ],
+   "training/train.py": [
+    [
+     258,
+     "train_norm, train_doy_sc = _load_split_tensors(Path(\"data/raw/splits/train.npz\"), mean_np, std_np)"
+    ],
+    [
+     259,
+     "val_npz = Path(\"data/raw/splits/val.npz\")"
+    ]
+   ],
+   "data/preprocessing.py": [
+    [
+     19,
+     "def load_raw_dataset(nc_path: str | Path = \"data/india_climate_train.nc\") -> Tuple[np.ndarray, np.ndarray]:"
+    ],
+    [
+     20,
+     "\"\"\"Load daily fields and dates from india_climate_train.nc."
+    ],
+    [
+     85,
+     "val_mask = (dates >= 20190101) & (dates <= 20201231)"
+    ],
+    [
+     86,
+     "test_mask = (dates >= 20210101) & (dates <= 20211231)"
+    ],
+    [
+     91,
+     "\"test\": (data[test_mask], dates[test_mask]),"
+    ],
+    [
+     97,
+     "print(f\"  Test  (2021):      {splits['test'][0].shape[0]} days ({splits['test'][1][0]} to {splits['test'][1][-1]})\")"
+    ]
+   ],
+   "data/static_fields.py": [
+    [
+     13,
+     "def extract_static_fields(nc_path: str | Path = \"data/india_climate_train.nc\", out_path: str | Path = \"checkpoints/static.npy\") -> np.ndarra"
+    ]
+   ],
+   "scripts/audit_dataset.py": [
+    [
+     3,
+     "Validates ``data/raw/india_climate_train.nc`` against the official"
+    ],
+    [
+     44,
+     "(\"test\", \"2021-01-01\", \"2021-12-31\", 365),"
+    ],
+    [
+     841,
+     "default=Path(\"data/raw/india_climate_train.nc\"),"
+    ],
+    [
+     842,
+     "help=\"Path to raw NetCDF dataset (default: data/raw/india_climate_train.nc)\","
+    ]
+   ],
+   "scripts/split_data.py": [
+    [
+     7,
+     "1. ``train.npz``             (2005-01-01..2018-12-31; keys: data, dates, doy)"
+    ],
+    [
+     8,
+     "2. ``val.npz``               (2019-01-01..2020-12-31; keys: data, dates, doy)"
+    ],
+    [
+     9,
+     "3. ``test.npz``              (2021-01-01..2021-12-31; keys: data, dates, doy)"
+    ],
+    [
+     64,
+     "\"test\": (TEST_END_DATE - TEST_START_DATE).days + 1,     # 365"
+    ],
+    [
+     71,
+     "\"train.npz\","
+    ],
+    [
+     72,
+     "\"val.npz\","
+    ],
+    [
+     73,
+     "\"test.npz\","
+    ],
+    [
+     332,
+     "(\"test\", \"sealed_holdout\", TEST_START_DATE, TEST_END_DATE),"
+    ],
+    [
+     351,
+     "if slices[\"val\"].stop != slices[\"test\"].start:"
+    ],
+    [
+     353,
+     "if slices[\"test\"].stop != len(date_objs):"
+    ],
+    [
+     372,
+     "test_p = partitions[\"test\"]"
+    ],
+    [
+     441,
+     "for name in (\"train\", \"val\", \"test\"):"
+    ],
+    [
+     638,
+     "for split_name in (\"train\", \"val\", \"test\"):"
+    ],
+    [
+     669,
+     "\"Validate india_climate_train.nc against the Monsoon-R1 contract and \""
+    ],
+    [
+     676,
+     "default=Path(\"data/raw/india_climate_train.nc\"),"
+    ],
+    [
+     677,
+     "help=\"Path to input NetCDF dataset (default: data/raw/india_climate_train.nc).\","
+    ],
+    [
+     734,
+     "for split_name in (\"train\", \"val\", \"test\"):"
+    ]
+   ]
+  },
+  "inference_touches_data_files": false
+ },
+ "note": "2021 test split: shape/continuity/isolation only; no metrics computed."
+}

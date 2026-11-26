@@ -1,0 +1,205 @@
+{
+ "kit_commit": "689c8798bbff7f318a1e74878a6985abc646080a",
+ "kit_worktree_dirty": false,
+ "kit_file_sha256_16": {
+  "__init__.py": "e3b0c44298fc1c14",
+  "build_dataset.py": "20ce26e348cc4999",
+  "client.py": "994875bebcf3dacd",
+  "contract.py": "2d768745ac3a645b",
+  "repo_scan.py": "081fc99264f9814f",
+  "schema_validator.py": "67a597b7301a8084",
+  "scoring.py": "c7ea49ff9b0d294a",
+  "stats.py": "5ad8c699bf42d424"
+ },
+ "grid": {
+  "NC": 6,
+  "NLAT": 32,
+  "NLON": 36,
+  "LAT": [
+   6.5,
+   37.5
+  ],
+  "LON": [
+   65.5,
+   100.5
+  ],
+  "channels": [
+   "t2m",
+   "tp",
+   "u10",
+   "v10",
+   "msl",
+   "tcwv"
+  ]
+ },
+ "io_schema": {
+  "health": "POST /health -> 200 {'status':'ready','model_name':str}",
+  "simulate_request": {
+   "init_states": [
+    3,
+    6,
+    32,
+    36
+   ],
+   "doy_sincos": "[sin,cos] of LAST input day (2*pi*doy/365)",
+   "steps": 10,
+   "perturbation": "null | [6,32,36] physical delta added to init_states[-1]"
+  },
+  "simulate_response": {
+   "rollout": [
+    10,
+    6,
+    32,
+    36
+   ],
+   "inference_ms": "float"
+  },
+  "wire": "nested JSON lists of finite float32 (b64 tolerated); physical units",
+  "client_decode": "client.call_simulate decodes rollout with expect_shape (SCORE_STEPS,6,32,36)"
+ },
+ "runtime": {
+  "TIME_LIMIT_S": 5.0,
+  "client.LIMIT_S": 5.0,
+  "MAX_RESPONSE_BYTES": 83886080,
+  "MAX_STEPS": 14,
+  "SCORE_STEPS": 10,
+  "LEAD_DAYS": [
+   1,
+   4,
+   8
+  ],
+  "health_warmup_s": 120,
+  "redirects": "refused",
+  "connect_timeout_s": 3.0,
+  "container": "offline, 4 CPU, 6 GB RAM, no GPU (README / R1_CONTRACT)"
+ },
+ "scoring_knobs": {
+  "SS_REF": 0.12,
+  "CSI_SS_REF": 0.1,
+  "RAIN_THRESH": 10.0,
+  "BLUR_MIN_RATIO": 0.4,
+  "BLUR_MAX_RATIO": 2.5,
+  "NULL_TOL": 0.001,
+  "NONZERO_MIN": 0.001,
+  "LOCAL_MIN_FRAC": 0.6,
+  "DILATE": 3,
+  "MAX_SPEED_CELLS_PER_DAY": 8.0,
+  "STABLE_MAX_STD": 5.0
+ },
+ "STD_DEFAULT": [
+  8.0,
+  8.0,
+  3.5,
+  2.5,
+  450.0,
+  20.0
+ ],
+ "stats_json_std": [
+  13.449504852294922,
+  7.50778341293335,
+  2.8987393379211426,
+  2.434114694595337,
+  618.4358520507812,
+  20.411705017089844
+ ],
+ "validity_gate": "shape==(steps,6,32,36); all finite; tp.min() >= -1e-6; 233.15 <= t2m <= 333.15 (strict float compare)",
+ "null_requirement": "max |a-b|/std <= NULL_TOL (1e-3) between perturbation=null and perturbation=zeros",
+ "causality": "finite; nonzero (max z >= 1e-3); stable (max z <= 5); localized (day-1 energy within DILATE=3 of box >= 60%); propagates = outside energy days4-8 mean > 1.5x day1 and > 2% of peak total, AND no_teleport (<5% energy beyond 3+8*(k+1) cells)",
+ "causality_points_rule": "per shock 7.5 pts, quarters: nonzero, then localized; propagates and stable count only if localized; null fail halves",
+ "shocks": {
+  "warm_ocean": {
+   "nonzero_cells_per_channel": {
+    "t2m": 144,
+    "tp": 0,
+    "u10": 0,
+    "v10": 0,
+    "msl": 0,
+    "tcwv": 144
+   },
+   "max_abs_std_units": 0.38936036825180054,
+   "box_deg": [
+    8.0,
+    20.0,
+    82.0,
+    94.0
+   ],
+   "box_cells": 144,
+   "box_lat_rows": [
+    8.5,
+    19.5
+   ],
+   "box_lon_cols": [
+    82.5,
+    93.5
+   ],
+   "near_mask_cells_dilate3": 288,
+   "outside_near_cells": 864
+  },
+  "monsoon_stall": {
+   "nonzero_cells_per_channel": {
+    "t2m": 0,
+    "tp": 0,
+    "u10": 120,
+    "v10": 120,
+    "msl": 0,
+    "tcwv": 0
+   },
+   "max_abs_std_units": 0.7571241855621338,
+   "box_deg": [
+    8.0,
+    20.0,
+    65.0,
+    75.0
+   ],
+   "box_cells": 120,
+   "box_lat_rows": [
+    8.5,
+    19.5
+   ],
+   "box_lon_cols": [
+    65.5,
+    74.5
+   ],
+   "near_mask_cells_dilate3": 212,
+   "outside_near_cells": 940
+  },
+  "null": {
+   "nonzero_cells_per_channel": {
+    "t2m": 0,
+    "tp": 0,
+    "u10": 0,
+    "v10": 0,
+    "msl": 0,
+    "tcwv": 0
+   },
+   "max_abs_std_units": 0.0
+  }
+ },
+ "repo_scan": {
+  "inference_scope": "files matching the simulate route regex + transitive local imports",
+  "critical": [
+   "external weather source pattern in inference code",
+   ">=5 date literals in an inference file",
+   "npy/npz archive with shape[0]>400 and trailing (32,36) ANYWHERE in the tree",
+   "no weight file >1KB (WEIGHT_EXT) and no HF link",
+   "no file serves the simulate route"
+  ],
+  "warn": [
+   "3-4 date literals or date()/datetime() call with year literal in inference file",
+   "climate data file (.nc/.grib/.zarr) anywhere in the tree"
+  ],
+  "skip_dirs": [
+   ".git",
+   ".ipynb_checkpoints",
+   ".venv",
+   "__pycache__",
+   "build",
+   "dist",
+   "env",
+   "node_modules",
+   "venv"
+  ],
+  "scans_working_tree_not_git": true
+ },
+ "hard_gate_round2": "beat persistence at day 4; validity on all 8 cases; non-zero localized response to >=1 shock"
+}

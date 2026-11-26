@@ -1,0 +1,91 @@
+{
+  "provenance": {
+    "computed_strictly_on": "2005-01-01..2018-12-31 (5113 training days)",
+    "val_test_leakage": false,
+    "stats_source": "data/raw/splits/train_stats.json",
+    "stats_function": "monsoon_r1.stats.channel_stats",
+    "climatology_source": "data/raw/splits/train_climatology.npy",
+    "climatology_indexing": "monsoon_r1.stats._doy_index: 0..365 leap-year-2000 calendar indexing ((date(2000, month, day) - date(2000, 1, 1)).days), where Feb 29 occupies slot 59 and Mar 1 always occupies slot 60. Distinct from the ordinary calendar d.timetuple().tm_yday (1..365/366) stored in *.npz['doy'] for data.dataset.MonsoonDataset and monsoon_r1.contract.doy_sincos.",
+    "static_source": "data/raw/splits/static.npy"
+  },
+  "wire_and_internal_contract": {
+    "channels": [
+      "t2m",
+      "tp",
+      "u10",
+      "v10",
+      "msl",
+      "tcwv"
+    ],
+    "units": [
+      "K",
+      "mm/day",
+      "m/s",
+      "m/s",
+      "Pa",
+      "kg/m2"
+    ],
+    "tp_transform": "linear",
+    "std_floor": 1e-06,
+    "orography_scale_m": 8000.0,
+    "doy_period_days": 365.0,
+    "physical_clamps": {
+      "t2m_range_K": [
+        233.16,
+        333.14
+      ],
+      "tp_min_mm_day": 0.0,
+      "tcwv_min_kg_m2": 0.0
+    },
+    "embedded_inside_checkpoint": true,
+    "note_on_legacy_stats_json": "checkpoints/stats.json (untouched) differs from data/raw/splits/train_stats.json by 0.273 Pa on msl mean due to float32 summation order (0.04% of std). checkpoints/model.pt embeds exact training stats_mean, stats_std, and static_raw inside its state_dict buffers."
+  },
+  "stats": {
+    "channels": [
+      "t2m",
+      "tp",
+      "u10",
+      "v10",
+      "msl",
+      "tcwv"
+    ],
+    "mean": [
+      292.3356628417969,
+      3.600639820098877,
+      0.9150365591049194,
+      0.1936323344707489,
+      101112.7421875,
+      29.864639282226562
+    ],
+    "std": [
+      13.449518203735352,
+      7.507794380187988,
+      2.898739814758301,
+      2.434112548828125,
+      618.4363403320312,
+      20.41170310974121
+    ]
+  },
+  "static_fields": {
+    "channels": [
+      "land_sea_mask",
+      "orography_m"
+    ],
+    "shape": [
+      2,
+      32,
+      36
+    ],
+    "dtype": "float32",
+    "land_sea_mask_range": [
+      0.0,
+      1.0
+    ],
+    "orography_m_range": [
+      -0.15628477931022644,
+      5283.93701171875
+    ],
+    "fractional_lsm_preserved": true,
+    "raw_orography_preserved": true
+  }
+}

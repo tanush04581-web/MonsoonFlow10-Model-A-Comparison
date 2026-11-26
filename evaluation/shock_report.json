@@ -1,0 +1,662 @@
+{
+ "std": [
+  13.449504852294922,
+  7.50778341293335,
+  2.8987393379211426,
+  2.434114694595337,
+  618.4358520507812,
+  20.411705017089844
+ ],
+ "windows": {
+  "20190115": {
+   "validity_base": [],
+   "deterministic": true,
+   "null_consistent_null_vs_zeros": true,
+   "null_consistent_null_vs_omitted": true,
+   "null_max_abs_diff": 0.0,
+   "null_within_1e-6": true,
+   "shocks": {
+    "warm_ocean": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.988368809223175,
+     "localized": true,
+     "far_frac_max": 0.004108421970158815,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      0.45626190304756165,
+      0.6741241812705994,
+      0.568451464176178,
+      0.42185860872268677,
+      0.3546183109283447,
+      0.3123700022697449,
+      0.2786647379398346,
+      0.251323938369751,
+      0.23158667981624603,
+      0.2129008024930954
+     ],
+     "outside_energy_by_day": [
+      0.2200813591480255,
+      0.8179439902305603,
+      1.6551272869110107,
+      2.270857334136963,
+      2.2669472694396973,
+      2.043278455734253,
+      1.786225438117981,
+      1.557859182357788,
+      1.3684823513031006,
+      1.2091065645217896
+     ]
+    },
+    "monsoon_stall": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9882102012634277,
+     "localized": true,
+     "far_frac_max": 0.011015587486326694,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": [],
+     "max_z_by_day": [
+      0.6817099452018738,
+      0.4269087016582489,
+      0.3105454742908478,
+      0.2512916028499603,
+      0.1994386613368988,
+      0.1620403528213501,
+      0.13008099794387817,
+      0.1021345779299736,
+      0.07944682985544205,
+      0.06162658706307411
+     ],
+     "outside_energy_by_day": [
+      0.3900085985660553,
+      0.7762724757194519,
+      0.6333198547363281,
+      0.47204160690307617,
+      0.6527498364448547,
+      0.7112239599227905,
+      0.6559122204780579,
+      0.5928491353988647,
+      0.5252851247787476,
+      0.45990878343582153
+     ]
+    },
+    "central_india_heat_+3K": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9963164329528809,
+     "localized": true,
+     "far_frac_max": 0.0005539731937460601,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    },
+    "western_ghats_rain_+20mm": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9260025024414062,
+     "localized": true,
+     "far_frac_max": 0.008419512771070004,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    },
+    "bay_low_-400Pa": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9781554341316223,
+     "localized": true,
+     "far_frac_max": 0.0016951346769928932,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "single_cell_tcwv_+8": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9847323894500732,
+     "localized": true,
+     "far_frac_max": 0.0003030881052836776,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    }
+   },
+   "causality_points_of_15": 13.125
+  },
+  "20190420": {
+   "validity_base": [],
+   "deterministic": true,
+   "null_consistent_null_vs_zeros": true,
+   "null_consistent_null_vs_omitted": true,
+   "null_max_abs_diff": 0.0,
+   "null_within_1e-6": true,
+   "shocks": {
+    "warm_ocean": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9353306889533997,
+     "localized": true,
+     "far_frac_max": 0.011066542007029057,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      0.4231915771961212,
+      0.40760737657546997,
+      0.389808714389801,
+      0.3307657837867737,
+      0.301628440618515,
+      0.3085838556289673,
+      0.2975471615791321,
+      0.27694767713546753,
+      0.2559017241001129,
+      0.23685631155967712
+     ],
+     "outside_energy_by_day": [
+      1.5798989534378052,
+      2.603419065475464,
+      4.031609058380127,
+      3.6462581157684326,
+      3.293224334716797,
+      2.671351432800293,
+      2.144911766052246,
+      1.893005132675171,
+      1.757443904876709,
+      1.6161147356033325
+     ]
+    },
+    "monsoon_stall": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9840134382247925,
+     "localized": true,
+     "far_frac_max": 0.010511714965105057,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      0.6128494739532471,
+      0.44469738006591797,
+      0.2807805836200714,
+      0.18903814256191254,
+      0.1621675044298172,
+      0.13511225581169128,
+      0.11401742696762085,
+      0.10439567267894745,
+      0.11338979005813599,
+      0.11175243556499481
+     ],
+     "outside_energy_by_day": [
+      0.42180800437927246,
+      0.6880499720573425,
+      0.5318741798400879,
+      0.5450631380081177,
+      0.5773835182189941,
+      0.6462098360061646,
+      0.7828670740127563,
+      0.9346720576286316,
+      1.0386778116226196,
+      1.1291645765304565
+     ]
+    },
+    "central_india_heat_+3K": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9957420825958252,
+     "localized": true,
+     "far_frac_max": 0.0005328587722033262,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "western_ghats_rain_+20mm": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9743673801422119,
+     "localized": true,
+     "far_frac_max": 0.003709364216774702,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    },
+    "bay_low_-400Pa": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9843403697013855,
+     "localized": true,
+     "far_frac_max": 0.001698436331935227,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "single_cell_tcwv_+8": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9932807683944702,
+     "localized": true,
+     "far_frac_max": 0.00012021209113299847,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    }
+   },
+   "causality_points_of_15": 15.0
+  },
+  "20190715": {
+   "validity_base": [],
+   "deterministic": true,
+   "null_consistent_null_vs_zeros": true,
+   "null_consistent_null_vs_omitted": true,
+   "null_max_abs_diff": 0.0,
+   "null_within_1e-6": true,
+   "shocks": {
+    "warm_ocean": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.970605731010437,
+     "localized": true,
+     "far_frac_max": 0.0047692786902189255,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      0.5859334468841553,
+      0.4216790795326233,
+      0.5103276968002319,
+      0.5027143359184265,
+      0.44577255845069885,
+      0.4293287396430969,
+      0.4153430163860321,
+      0.4330650866031647,
+      0.4343172609806061,
+      0.40444737672805786
+     ],
+     "outside_energy_by_day": [
+      1.191681146621704,
+      3.181407928466797,
+      4.289730548858643,
+      5.121994495391846,
+      4.667326927185059,
+      3.7523226737976074,
+      3.6803929805755615,
+      4.400228023529053,
+      4.0373125076293945,
+      3.2318007946014404
+     ]
+    },
+    "monsoon_stall": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9919886589050293,
+     "localized": true,
+     "far_frac_max": 0.005674697458744049,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      1.5554319620132446,
+      1.1415575742721558,
+      0.9866985082626343,
+      0.9098326563835144,
+      0.7727545499801636,
+      0.8715061545372009,
+      0.8629980087280273,
+      0.8025731444358826,
+      0.7299653887748718,
+      0.6523872017860413
+     ],
+     "outside_energy_by_day": [
+      1.3669878244400024,
+      1.9088852405548096,
+      2.3946590423583984,
+      2.541452646255493,
+      2.855983257293701,
+      3.2099883556365967,
+      4.0324201583862305,
+      5.928306579589844,
+      8.785778045654297,
+      10.712942123413086
+     ]
+    },
+    "central_india_heat_+3K": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9974438548088074,
+     "localized": true,
+     "far_frac_max": 0.0008102421415969729,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "western_ghats_rain_+20mm": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9726247191429138,
+     "localized": true,
+     "far_frac_max": 0.011132336221635342,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "bay_low_-400Pa": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9588691592216492,
+     "localized": true,
+     "far_frac_max": 0.004353268537670374,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "single_cell_tcwv_+8": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9863811731338501,
+     "localized": true,
+     "far_frac_max": 0.00022348178026732057,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    }
+   },
+   "causality_points_of_15": 15.0
+  },
+  "20200810": {
+   "validity_base": [],
+   "deterministic": true,
+   "null_consistent_null_vs_zeros": true,
+   "null_consistent_null_vs_omitted": true,
+   "null_max_abs_diff": 0.0,
+   "null_within_1e-6": true,
+   "shocks": {
+    "warm_ocean": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9878742694854736,
+     "localized": true,
+     "far_frac_max": 0.0034696096554398537,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      0.6842109560966492,
+      0.6759609580039978,
+      0.45108941197395325,
+      0.5269721150398254,
+      0.6391847133636475,
+      0.5757473111152649,
+      0.4713680148124695,
+      0.3953513205051422,
+      0.37785595655441284,
+      0.35624346137046814
+     ],
+     "outside_energy_by_day": [
+      0.616601288318634,
+      3.704348564147949,
+      6.988007545471191,
+      5.416494369506836,
+      5.243489742279053,
+      5.241085052490234,
+      4.555176734924316,
+      3.698240041732788,
+      3.545078992843628,
+      3.7106621265411377
+     ]
+    },
+    "monsoon_stall": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9873340725898743,
+     "localized": true,
+     "far_frac_max": 0.013293685391545296,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      1.5141083002090454,
+      1.043442964553833,
+      1.1364648342132568,
+      1.1205447912216187,
+      1.1864351034164429,
+      0.8362705111503601,
+      0.7112460732460022,
+      0.57906174659729,
+      0.5262197256088257,
+      0.5339338183403015
+     ],
+     "outside_energy_by_day": [
+      2.601577043533325,
+      6.4175920486450195,
+      7.574170112609863,
+      5.538380146026611,
+      5.828187942504883,
+      8.515815734863281,
+      11.572266578674316,
+      11.960582733154297,
+      11.535776138305664,
+      12.587523460388184
+     ]
+    },
+    "central_india_heat_+3K": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9916114211082458,
+     "localized": true,
+     "far_frac_max": 0.002056563040241599,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "western_ghats_rain_+20mm": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.8770553469657898,
+     "localized": true,
+     "far_frac_max": 0.07205387949943542,
+     "no_teleport": false,
+     "propagates": false,
+     "validity": []
+    },
+    "bay_low_-400Pa": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.980502188205719,
+     "localized": true,
+     "far_frac_max": 0.001724249217659235,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "single_cell_tcwv_+8": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9821451902389526,
+     "localized": true,
+     "far_frac_max": 0.00022451615950558335,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    }
+   },
+   "causality_points_of_15": 15.0
+  },
+  "20201015": {
+   "validity_base": [],
+   "deterministic": true,
+   "null_consistent_null_vs_zeros": true,
+   "null_consistent_null_vs_omitted": true,
+   "null_max_abs_diff": 0.0,
+   "null_within_1e-6": true,
+   "shocks": {
+    "warm_ocean": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9690770506858826,
+     "localized": true,
+     "far_frac_max": 0.011876324191689491,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      0.7531980872154236,
+      1.0553853511810303,
+      1.3248846530914307,
+      1.2442699670791626,
+      1.4193384647369385,
+      1.3873264789581299,
+      1.4970483779907227,
+      1.2535345554351807,
+      1.0365060567855835,
+      1.5480490922927856
+     ],
+     "outside_energy_by_day": [
+      2.1787004470825195,
+      8.66832160949707,
+      12.447389602661133,
+      16.787559509277344,
+      25.384397506713867,
+      40.911617279052734,
+      55.89513397216797,
+      65.87203979492188,
+      51.96697998046875,
+      28.413162231445312
+     ]
+    },
+    "monsoon_stall": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9934642910957336,
+     "localized": true,
+     "far_frac_max": 0.015618049539625645,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": [],
+     "max_z_by_day": [
+      1.5665702819824219,
+      2.038562774658203,
+      0.8617283701896667,
+      0.5245442390441895,
+      0.5729079246520996,
+      0.5235458612442017,
+      0.5050225257873535,
+      0.5483483672142029,
+      0.5804640054702759,
+      0.5544086694717407
+     ],
+     "outside_energy_by_day": [
+      0.872434675693512,
+      3.156830072402954,
+      5.445114612579346,
+      6.025903701782227,
+      6.097716331481934,
+      3.790881395339966,
+      3.5424609184265137,
+      3.89448881149292,
+      4.332856178283691,
+      3.8696343898773193
+     ]
+    },
+    "central_india_heat_+3K": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9711493849754333,
+     "localized": true,
+     "far_frac_max": 0.000994376139715314,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "western_ghats_rain_+20mm": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.8909935355186462,
+     "localized": true,
+     "far_frac_max": 0.03677666559815407,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "bay_low_-400Pa": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9435021281242371,
+     "localized": true,
+     "far_frac_max": 0.0013400826137512922,
+     "no_teleport": true,
+     "propagates": true,
+     "validity": []
+    },
+    "single_cell_tcwv_+8": {
+     "finite": true,
+     "nonzero": true,
+     "stable": true,
+     "near_frac_day1": 0.9743947386741638,
+     "localized": true,
+     "far_frac_max": 0.0004720505967270583,
+     "no_teleport": true,
+     "propagates": false,
+     "validity": []
+    }
+   },
+   "causality_points_of_15": 15.0
+  }
+ },
+ "causality_points_mean_of_15": 14.625,
+ "adversarial": {
+  "perturbation_nan": {
+   "http": 422,
+   "silently_ignored": false
+  },
+  "perturbation_inf": {
+   "http": 422,
+   "silently_ignored": false
+  }
+ },
+ "note": "A persistence server returns the perturbed last state unchanged for every day: the response is non-zero, localized and stable but cannot propagate (outside-box energy stays 0), so 'propagates' is expected False for persistence.",
+ "health": {
+  "status": "ready",
+  "model_name": "MonsoonFlow-10 (ms_resunet-anchor)",
+  "device": "cpu",
+  "threads": 4,
+  "uptime_seconds": 12.172,
+  "checkpoint_file": "model.pt",
+  "architecture": "ms_resunet",
+  "use_seasonal_anchor": true,
+  "run_name": "exp4_msresunet_anchor",
+  "epoch": 22,
+  "tp_transform": "linear"
+ }
+}

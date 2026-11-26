@@ -1,0 +1,22 @@
+[project]
+name = "monsoon-r1-kit"
+version = "1.0.0"
+description = "Yugaantar DevForge, Multiverse of Monsoon, Round 1: API contract, scoring definitions, schema validator, repo scanner and dataset tooling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.26", "requests"]
+
+[project.optional-dependencies]
+data = ["xarray", "netCDF4", "scipy"]
+serve = ["fastapi", "uvicorn"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["monsoon_r1"]
+
+[tool.setuptools.package-data]
+monsoon_r1 = ["template/serve.py"]
