@@ -11,7 +11,8 @@ env/
 htmlcov/
 
 # Datasets & Secrets (never commit raw climate archives, sealed 2021 data, or credentials)
-data/
+data/raw/
+*.npz
 *.nc
 *.nc4
 *.grib
@@ -29,3 +30,19 @@ data/
 Thumbs.db
 .vscode/
 .idea/
+
+# Frontend
+node_modules/
+dashboard/node_modules/
+dist/
+dashboard/dist/
+.vite/
+dashboard/.vite/
+
+# Local agent & scratch artifacts
+agent_talk/
+graphify-out/
+.agents/
+.claude/
+Claude outputs/
+*.zip

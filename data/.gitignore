@@ -1,0 +1,7 @@
+# Ignore raw climate data files
+*.nc
+*.nc4
+*.grib
+*.grib2
+*.zarr
+raw/
